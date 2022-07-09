@@ -5,12 +5,15 @@ import android.os.Bundle
 
 class MainActivity : AppCompatActivity() {
 //    ArrayList 사용하기 위해 .. 전역 변수 = 멤버 변수
+//    목록 공간 만들어주고
     val mStudentList = ArrayList<StudentData>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
 //        학생 데이터 (더미 데이터 생성)
+//        StudentData(~~~)라는 학생 데이터 객체들을 생성
+//        ArrayList에 추가 (mStudentList.add)
         mStudentList.add(StudentData("최승희1", 1991, "서울시 성북구1"))
         mStudentList.add(StudentData("최승희2", 1992, "서울시 성북구2"))
         mStudentList.add(StudentData("최승희3", 1993, "서울시 성북구3"))
