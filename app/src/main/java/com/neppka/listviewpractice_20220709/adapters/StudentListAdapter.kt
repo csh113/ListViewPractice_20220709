@@ -34,7 +34,8 @@ class StudentListAdapter(
         ageTxt.text = mList[position].birthYear.toString()
         addressTxt.text = mList[position].address
 
-
+//        오후 수업 시작 - event 추가
+//        row.setOnClickListener() MainActivity에서 한다.
         return row
     }
 
