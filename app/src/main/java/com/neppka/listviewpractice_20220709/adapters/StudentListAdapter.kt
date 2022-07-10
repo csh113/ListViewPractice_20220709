@@ -36,7 +36,7 @@ class StudentListAdapter(
 //        도전과제 => String을 가공하여 ${} 를 활용해서 => 나이부분의 값이 (~~세)로 표시되도록 가공
         val calendar = Calendar.getInstance()
 
-        var birthYearVal = mList[position].birthYear - calendar.get(Calendar.YEAR) + 1
+        var birthYearVal = calendar.get(Calendar.YEAR) - mList[position].birthYear  + 1
 
         ageTxt.text = "${birthYearVal} 세"
         addressTxt.text = mList[position].address
