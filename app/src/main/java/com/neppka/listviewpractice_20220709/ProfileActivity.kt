@@ -9,13 +9,20 @@ class ProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
-        val name = intent.getStringExtra("name")
-        val birthYear = intent.getIntExtra("birthYear", 0)
-        val address = intent.getStringExtra("address")
+//        val name = intent.getStringExtra("name")
+////        val birthYear = intent.getIntExtra("birthYear", 0)
+////        val address = intent.getStringExtra("address")
 
 //        activity_profile의 것
-        nameTxt.text = name
-        ageTxt.text = birthYear.toString()
-        addressTxt.text = address
+//        nameTxt.text = name
+//        ageTxt.text = birthYear.toString()
+//        addressTxt.text = address
+
+//        SudentData의 함수로 가져오기 - Serializable -> StudentData로 형변환
+        val studentData = intent.getSerializableExtra("studaentData") as StudentData
+
+        nameTxt.text = studentData.name
+        ageTxt.text = "(${studentData.getKoreanAge().toString()} 세)"
+        addressTxt.text = studentData.address
     }
 }

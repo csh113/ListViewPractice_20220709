@@ -52,10 +52,12 @@ class MainActivity : AppCompatActivity() {
 //        이벤트 넘기기
         mainListView.setOnItemClickListener { adapterView, view, position, l ->
             val myIntent = Intent(this, ProfileActivity::class.java)
+            myIntent.putExtra("studentData", mStudentList[position])
 
-            myIntent.putExtra("name", mStudentList[position].name)
-                .putExtra("birthYear", mStudentList[position].birthYear)
-                .putExtra("address", mStudentList[position].address)
+
+//            myIntent.putExtra("name", mStudentList[position].name)
+//                .putExtra("birthYear", mStudentList[position].birthYear)
+//                .putExtra("address", mStudentList[position].address)
 
             startActivity(myIntent)
         }
