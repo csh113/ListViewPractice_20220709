@@ -19,7 +19,7 @@ class ProfileActivity : AppCompatActivity() {
 //        addressTxt.text = address
 
 //        SudentData의 함수로 가져오기 - Serializable -> StudentData로 형변환
-        val studentData = intent.getSerializableExtra("studaentData") as StudentData
+        val studentData = intent.getSerializableExtra("studentData") as StudentData
 
         nameTxt.text = studentData.name
         ageTxt.text = "(${studentData.getKoreanAge().toString()} 세)"
