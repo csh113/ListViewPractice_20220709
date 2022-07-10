@@ -38,7 +38,8 @@ class StudentListAdapter(
 
         var birthYearVal = calendar.get(Calendar.YEAR) - mList[position].birthYear  + 1
 
-        ageTxt.text = "${birthYearVal} 세"
+//        ageTxt.text = "${birthYearVal} 세"
+        ageTxt.text = "(${mList[position].getKoreanAge()} 세)"
         addressTxt.text = mList[position].address
 
 //        오후 수업 시작 - event 추가
